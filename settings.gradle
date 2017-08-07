@@ -1,0 +1,1 @@
+include ':app', ':mvplib', ':okgo', ':okrx', ':libzxing', ':libtext'

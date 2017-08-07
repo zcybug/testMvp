@@ -1,0 +1,39 @@
+
+https://www.gitbook.com/download/pdf/book/huanglizhuo/kotlin-in-chinese
+/**
+*学习kotlin心得
+**/
+
+fun sum(a:Int,b:Int):Int{
+}
+Int:返回类型
+Unit:无返回类型
+fun getStringLenght(obj: Any): Int? {
+    if (obj is String)
+        return obj.length
+    return null
+}
+
+?:
+
+is:
+in:
+it:
+as:
+
+每个数值类型都支持下面的转换：
+toByte(): Byte
+toShort(): Short
+toInt(): Int
+toLong(): Long
+toFloat(): Float
+toDouble(): Double
+toChar(): Char
+
+位运算：
+shl(bits) – 带符号左移 (相当于 Java’s << ) shr(bits) – 带符号右移
+(相当于 Java’s >> ) ushr(bits) – 无符号右移 (相当于 Java’s >>> )
+and(bits) – 按位与 or(bits) – 按位或 xor(bits) – 按位异或
+inv(bits) – 按位翻转
+
+44

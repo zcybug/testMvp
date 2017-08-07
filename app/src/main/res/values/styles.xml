@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorAppTheme</item>
+        <item name="colorPrimaryDark">@color/colorAppTheme</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="toolbarStyle" tools:ignore="NewApi">@style/MyToolBar</item>
+    </style>
+
+    <style name="MyToolBar" parent="Widget.AppCompat.Toolbar">
+        <!--左边边距-->
+        <item name="contentInsetStart">0dp</item>
+    </style>
+
+    <style name="line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_line_solid</item>
+    </style>
+</resources>

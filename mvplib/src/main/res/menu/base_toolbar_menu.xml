@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--扫描-->
+    <item
+        android:id="@+id/title_scan"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="@string/scan"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+    <!--添加-->
+    <item
+        android:id="@+id/title_add"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="@string/add"
+        app:showAsAction="ifRoom" />
+    <!--设置-->
+    <item
+        android:id="@+id/title_setting"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="@string/setting"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+    <!--搜索-->
+    <item
+        android:id="@+id/title_search"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="@string/search"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+    <!--日期-->
+    <item
+        android:id="@+id/title_date"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="@string/date"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+    <!--刷新-->
+    <item
+        android:id="@+id/title_refresh"
+        android:icon="@mipmap/ic_launcher_round"
+        android:title="@string/refresh"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_item_share"
+        android:actionProviderClass="android.widget.ShareActionProvider"
+        android:title="Share"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+    <!--<item android:id="@+id/title_more1"-->
+    <!--android:title="@string/right2"-->
+    <!--app:showAsAction="never"/>-->
+    <!--<item android:id="@+id/title_more2"-->
+    <!--android:title="@string/right2"-->
+    <!--app:showAsAction="never"/>-->
+</menu>

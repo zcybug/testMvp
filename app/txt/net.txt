@@ -1,0 +1,313 @@
+compile 'com.loopj.android:android-async-http:1.4.9'
+zhouchunyu
+zcy842953
+
+http://run.xiangsidi.com
+https://github.com/lygttpod/SuperTextView  //SuperTextView
+
+compile 'com.loopj.android:android-async-http:1.4.9'
+zhouchunyu
+zcy842953
+
+http://run.xiangsidi.com
+https://github.com/lygttpod/SuperTextView  //SuperTextView
+
+http://keeganlee.me/post/android/20150830 //shape
+https://github.com/saiwu-bigkoo/Android-SnappingStepper  //购物车数量增减
+https://github.com/eluleci/FlatUI
+www.xunshui.net
+Genymotion 虚拟机
+android studio 开发软件
+
+谷歌
+203.208.46.146 www.google.com
+74.125.113.121 developer.android.com
+203.208.46.146 dl.google.com
+203.208.46.146 dl-ssl.google.com
+74.125.237.1 dl-ssl.google.com
+http://www.appkefu.com/AppKeFu/tutorial-android3.html#6
+
+loading
+MultipleStatusView  compile 'com.classic.common:multiple-status-view:1.2'
+  kprogresshud   compile 'com.kaopiz:kprogresshud:1.0.5'
+   Fancybuttons
+BaseRecyclerViewAdapterHelper
+
+http://fiddler2.com/抓包
+
+https://github.com/H07000223/FlycoDialog_Master  //dialog
+
+
+https://github.com/lenve/HealthyFoodMVP
+https://github.com/ReactiveX/RxJava
+https://github.com/rengwuxian/RxJavaSamples
+
+开源控件网址
+https://github.com/binIoter/GuideView
+https://github.com/lygttpod/SuperTextView
+https://github.com/bingoogolapple/BGABanner-Android//轮播图
+compile 'com.github.iwgang:countdownview:2.1'//倒计时
+https://github.com/hongyangAndroid/MPermissions//申请权限
+https://github.com/hotchemi/PermissionsDispatcher
+http://mdsa.51cto.com/art/201508/489882_all.htm
+http://waylenw.github.io/AndroidStudio/android-studio-control-teacher/
+http://dl.google.com/android/studio/patches/AI-141.2288178-AI-141.2456560-patch-win.jar// abdroid studio更新下载
+https://dl.google.com/android/studio/patches/updates.xml//android studio更新包地址
+http://www.cnblogs.com/habin/p/4539349.html?utm_source=tuicool//android studio更新指导
+http://ask.android-studio.org/?/article/34 //sdk更新
+http://www.cnblogs.com/sunzn/p/4242131.html更新sdk
+http://blog.csdn.net/leeo1010/article/details/49903759//android studio代码混淆
+http://www.android-doc.com/
+https://github.com/JakeWharton/butterknife //
+http://blog.csdn.net/leave00608/article/details/43232165
+https://github.com/hongyangAndroid/okhttp-utils //okhttp
+http://tool.oschina.net/codeformat/json
+https://github.com/Trinea/android-open-project
+https://github.com/yanzhenjie/AndPermission  权限
+https://github.com/hdodenhof/CircleImageView//圆形 imgeview
+https://github.com/HomHomLin/AdvancedPagerSlidingTabStrip  //tab
+http://www.javaapk.com/
+http://www.w3school.com.cn/
+stackoverflow，google
+http://blog.csdn.net/stevenhu_223/article/details/8033153
+http://www.kwstu.com/ArticleView/kwstu_201408210537111573  bar
+http://blog.csdn.net/bigconvience/article/details/28886241
+https://github.com/pedrovgs/AndroidWiFiADB
+http://blog.csdn.net/he_666/article/details/51821500//启动页 图片适配
+http://www.cnblogs.com/soaringEveryday/p/4835839.html//适配
+https://github.com/hongyangAndroid/AndroidAutoLayout//适配
+http://p.codekk.com/detail/Android/YeDaxia/SQLiteUtils//splite
+http://www.tuyiyi.com/v/32863.html//ps
+http://blog.sina.com.cn/s/blog_7e24d8e00102wrn1.html//ps
+http://www.25xt.com/iconweb/5916.html//标准
+http://98.126.129.245/
+
+http://api.vns.com/doc/Indexdoc//接口文档
+http://blog.csdn.net/yanzhenjie1003//博客
+http://blog.csdn.net/lmj623565791/article/details/38965311 //工具类
+https://github.com/yanzhenjie/AndPermission//申请权限
+http://blog.csdn.net/Lucky_bo/article/details/52222377 //代碼佈局
+
+https://github.com/supercwn/SuperRecycleView
+12:44:44
+邓哥 2015/1/27 12:44:44
+host: svn.devnote.me
+user: zhou
+passwd: 1qaz2wsx
+
+邓哥 2015/1/27 12:45:59
+navicat
+
+http://appapi.cds.devnote.me:81/
+
+https://tower.im/join/2fcd62e740a744d084e8feaa9d4b88f0/
+
+http://www.tuicool.com/articles/a2MNna idea安装过程
+http://my.oschina.net/wangrenhui1990/blog/337550  idea搭建webserver
+
+http://www.easyicon.net/ 图标
+
+http://www.2cto.com/kf/201405/304749.html  异步加载
+
+peisong 配送商
+
+晓文 2015/7/24 9:36:30
+confirmation_time 配送商确认时间
+express_name 物流公司
+express_sn 物流单号
+
+晓文 2015/7/24 9:36:50
+logistics_info{}
+
+http://ningtukun.blog.163.com/blog/static/186541445201421454130823/
+
+
+http://www.ui.cn/detail/46110.html
+
+http://www.ui.cn/detail/59242.html
+
+http://www.ui.cn/detail/50150.html
+
+http://www.ui.cn/detail/47930.html
+
+http://www.ui.cn/detail/47240.html
+
+http://www.ui.cn/detail/46950.html
+
+http://www.ui.cn/detail/44511.html（会员首页）
+
+http://www.zcool.com.cn/work/ZMTI2NTY4OTI=.html
+
+http://www.ui.cn/detail/59236.html
+
+http://www.zcool.com.cn/work/ZMTI4MzEwMzI=.html
+
+http://android.tgbus.com/Android/tutorial/201107/359336.shtml（android 搜索）
+
+
+
+
+
+http://192.168.18.81:8080/
+晓文 14:15:29
+zhouchunyu
+zcy123456
+
+set_user_safe_mobile接口
+应用参数变更为：
+mobile                                  手机号
+smscode                                短信验证码，为空表示获取验证码
+verify_mobile                        验证手机号类型，old_bind 时为验证已绑定的手机号，在smscode为空时改字段有效
+http://www.bootcss.com/p/git-guide/
+xmind  axure
+
+微信支付商户号：1233585502
+申请对应的公众号：维纳斯（vnasiflowers）
+公众号APPID：wx2853d68159d5fa06
+9:26:37
+晓文 2015/11/5 9:26:37
+支付宝账户：25468788@qq.com
+商户号：2088501751439568
+秘钥：y75w1kulwx6e96tvfvr0m5xsgbwyi5tt
+9:34:37
+晓文 2015/11/5 9:34:37
+U8GiafTSbHGPKGwaR8aFoZOqdMj0OYjg
+
+1511657356@qq.com
+f1184104588
+
+
+http://baifendata/docenter/index.php/Home/Item/show?item_id=4
+
+
+
+
+
+http://baifendata/docenter/index.php/Home/Item/show?item_id=4
+
+
+
+
+
+
+
+
+#指定代码的压缩级别
+-optimizationpasses 5
+#包明不混合大小写
+-dontusemixedcaseclassnames
+#不去忽略非公共的库类
+-dontskipnonpubliclibraryclasses
+ #优化  不优化输入的类文件
+-dontoptimize
+ #预校验
+-dontpreverify
+ #混淆时是否记录日志
+-verbose
+ # 混淆时所采用的算法
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+#保护注解
+-keepattributes *Annotation*
+
+-keep class com.alipay.** { *; }
+-keep class com.ta.utdid2.** { *; }
+-keep class com.ut.device.** { *; }
+-keep class com.loopj.android.http.** { *; }
+-keep class com.zdp.aseo.content.** { *; }
+-keep class cmb.** { *; }
+-keep class com.squareup.wire.** { *; }
+-keep class com.umeng.** { *; }
+-keep class org.android.** { *; }
+-keep class org.apache.commons.codec.** { *; }
+-keep class com.alibaba.fastjson.** { *; }
+-keep class org.apache.http.entity.mime.** { *; }
+-keep class com.tencent.** { *; }
+-keep class com.slidingmenu.lib.** { *; }
+-keep class com.umeng.socialize.** { *; }
+-keep class com.umeng.analytics.** { *; }
+-keep class com.umeng.alimama.moblie.** { *; }
+-keep class com.umeng.update.** { *; }
+-keep class u.upd.** { *; }
+-keep class com.nostra13.universalimageloader.** { *; }
+-keep class com.sina.** { *; }
+
+-keep public class * extends android.app.Fragment
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+-keep public class com.android.vending.licensing.ILicensingService
+#如果有引用v4包可以添加下面这行
+-keep public class * extends android.support.v4.app.Fragment
+
+
+
+
+15123166909 个人认证  15123166333 个体认证审核中  企业认证（法人） 15123177707 企业认证（代理人） 15123177707
+15123111707 企业认证通过  15123100808
+乙方开户行：浙商银行苏州分行
+户名：苏州新科兰德科技有限公司
+账号：3050020010120100129207
+
+
+http://112.74.245.221:8805/manage/index.html#
+admin
+111111
+
+//图片
+http://www.tinypng.com/
+
+浙江省金华市永康市总部中心金族大厦
+
+
+https://wenku.baidu.com/view/3d756b6a16fc700abb68fcbd.html
+
+http://www.docin.com/p-830463247.html
+
+18623355522     123456
+18302343390     123456 正式认证通过
+15023101204     123456 正式认证驳回
+
+15123166999 个体认证中
+15123166888 企业法人
+15123188899 企业法人  通过
+15123199988 个人认证  通过
+15123166668 企业 代理人 禁用
+
+在线客服
+http://qiyukf.com/kehu  网易七鱼
+https://www.7moor.com/pricenew  容联.七陌
+http://www.rongcloud.cn 融云
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
