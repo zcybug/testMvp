@@ -3,6 +3,7 @@ package com.android.mvp.widge;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.util.TypedValue;
@@ -12,7 +13,9 @@ import android.widget.TextView;
 
 import com.android.mvp.R;
 
+import mvp.android.com.mvplib.log.XLog;
 import mvp.android.com.mvplib.utils.DensityUtil;
+import mvp.android.com.mvplib.utils.StrUtils;
 
 /**
  * ================================================
@@ -132,6 +135,7 @@ public class MSuperTextView extends RelativeLayout {
     }
 
     private void initRightText() {
+        XLog.e("rightTextSize==" + rightTextSize + "");
         if (null == rightTv) {
             rightTv = new TextView(mContext);
         }
@@ -145,6 +149,63 @@ public class MSuperTextView extends RelativeLayout {
         rightTv.setTextSize(TypedValue.COMPLEX_UNIT_PX, rightTextSize);
         rightTv.setLayoutParams(rightTextParams);
         addView(rightTv);
+    }
+
+    public MSuperTextView setLiftTextSize(int size) {
+        if (null != liftTv) {
+            liftTv.setTextSize(size);
+        }
+        return this;
+    }
+
+    public MSuperTextView setRightTextSize(int size) {
+        if (null != rightTv) {
+            rightTv.setTextSize(size);
+        }
+        return this;
+    }
+
+
+    public MSuperTextView setLiftTextColor(int color) {
+        if (null != liftTv) {
+            liftTv.setTextColor(mContext.getResources().getColor(color));
+        }
+        return this;
+    }
+
+    public MSuperTextView setRightTextColor(int color) {
+        if (null != rightTv) {
+            rightTv.setTextColor(mContext.getResources().getColor(color));
+        }
+        return this;
+    }
+
+    public MSuperTextView setLiftTextColor(String color) {
+        if (null != liftTv && StrUtils.isNotNull(color)) {
+            liftTv.setTextColor(Color.parseColor(color));
+        }
+        return this;
+    }
+
+    public MSuperTextView setRightTextColor(String color) {
+        if (null != rightTv && StrUtils.isNotNull(color)) {
+            rightTv.setTextColor(Color.parseColor(color));
+        }
+        return this;
+    }
+
+    public MSuperTextView setLiftImg(int imgId) {
+        if (null != leftIconIV) {
+            leftIconIV.setImageResource(imgId);
+        }
+        return this;
+    }
+
+    public MSuperTextView setRightImg(int imgId) {
+        if (null != rightIconIV) {
+            rightIconIV.setImageResource(imgId);
+        }
+        return this;
     }
 
     @Override
