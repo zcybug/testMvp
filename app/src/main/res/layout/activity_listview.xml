@@ -4,11 +4,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <Button
+        android:id="@+id/kotlin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="kotlin" />
+
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </ListView>
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

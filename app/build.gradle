@@ -58,7 +58,6 @@ dependencies {
     compile project(':mvplib')
     compile 'com.github.eluleci:flatui:3.0.0'
     compile 'com.android.support:design:25.3.1'
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     compile 'com.google.vr:sdk-panowidget:1.10.0'
     compile 'com.google.vr:sdk-videowidget:1.10.0'
 

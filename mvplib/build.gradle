@@ -57,4 +57,5 @@ dependencies {
     compile project(':libzxing')
     compile files('libs/pinyin4j-2.5.0.jar')
     compile project(':libtext')
+    compile project(':kotlinlib')
 }
