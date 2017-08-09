@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.util.TypedValue;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -51,6 +52,22 @@ public class MSuperTextView extends RelativeLayout {
     private LayoutParams rightTextParams;
     private TextView rightTv;
 
+    /**
+     * 分割线的类型
+     */
+    private static final int NONE = 0;
+    private static final int TOP = 1;
+    private static final int BOTTOM = 2;
+    private static final int BOTH = 3;
+    private static final int default_Divider = BOTTOM;
+    private int mDefaultDividerLineColor = 0xFFE8E8E8;//分割线默认颜色
+
+    private int mDividerLineType;
+    private View mTopDividerLineV, mBottomDividerLineV;
+    private LayoutParams mTopDividerParams, mBottomDividerParams;
+    private int mDividerHeight;
+    private int mDividerLineColor;
+
     private int defaultColor = 0xFF373737;//文字默认颜色
     private int defaultSize = 14;//默认字体大小
     private int defaultMaxEms = 10;
@@ -79,14 +96,23 @@ public class MSuperTextView extends RelativeLayout {
         rightText = typedArray.getString(R.styleable.SuperTV_rightText);
         rightTextColor = typedArray.getColor(R.styleable.SuperTV_rightTextColor, defaultColor);
         rightTextSize = typedArray.getDimensionPixelSize(R.styleable.SuperTV_rightTextSize, defaultSize);
+        mDividerLineType = typedArray.getInt(R.styleable.SuperTV_mDividerLineType, default_Divider);
+        mDividerHeight = typedArray.getDimensionPixelSize(R.styleable.SuperTV_mDividerLineHeight, DensityUtil.dip2px(mContext, 0.5f));
+        mDividerLineColor = typedArray.getColor(R.styleable.SuperTV_mDividerLineColor, mDefaultDividerLineColor);
+        typedArray.recycle();//关闭
         initView();
     }
 
     private void initView() {
+        //设置背景点击效果
+        this.setBackgroundResource(R.drawable.selector_white);
+        this.setClickable(true);
+
         initLeftIcon();
         initRightIcon();
         initLiftText();
         initRightText();
+        initDivierLineView();
     }
 
     private void initLeftIcon() {
@@ -149,6 +175,49 @@ public class MSuperTextView extends RelativeLayout {
         rightTv.setTextSize(TypedValue.COMPLEX_UNIT_PX, rightTextSize);
         rightTv.setLayoutParams(rightTextParams);
         addView(rightTv);
+    }
+
+    private void initDivierLineView() {
+        switch (mDividerLineType) {
+            case NONE://不需要分割线
+                break;
+            case TOP://分割线在上面
+                initTopDivider();
+                break;
+            case BOTTOM://分割线在下面
+                initBottomDivider();
+                break;
+            case BOTH://上下都有分割线
+                initTopDivider();
+                initBottomDivider();
+                break;
+        }
+    }
+
+    private void initTopDivider() {
+        if (null == mTopDividerLineV) {
+            if (null == mTopDividerParams) {
+                mTopDividerParams = new LayoutParams(LayoutParams.MATCH_PARENT, mDividerHeight);
+            }
+            mTopDividerParams.addRule(ALIGN_PARENT_TOP, TRUE);
+            mTopDividerLineV = new View(mContext);
+            mTopDividerLineV.setLayoutParams(mTopDividerParams);
+            mTopDividerLineV.setBackgroundColor(mDividerLineColor);
+        }
+        addView(mTopDividerLineV);
+    }
+
+    private void initBottomDivider() {
+        if (null == mBottomDividerLineV) {
+            if (null == mBottomDividerParams) {
+                mBottomDividerParams = new LayoutParams(LayoutParams.MATCH_PARENT, mDividerHeight);
+            }
+            mBottomDividerParams.addRule(ALIGN_PARENT_BOTTOM, TRUE);
+            mBottomDividerLineV = new View(mContext);
+            mBottomDividerLineV.setLayoutParams(mBottomDividerParams);
+            mBottomDividerLineV.setBackgroundColor(mDividerLineColor);
+        }
+        addView(mBottomDividerLineV);
     }
 
     public MSuperTextView setLiftTextSize(int size) {

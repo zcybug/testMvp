@@ -117,12 +117,12 @@ public class SpannableActivity extends AppCompatActivity {
         SpannableString spannableString07 = new SpannableString("22 + 32 = 13");
         SuperscriptSpan superscriptSpan01 = new SuperscriptSpan();
         SuperscriptSpan superscriptSpan02 = new SuperscriptSpan();
-        spannableString07.setSpan(superscriptSpan01, 1, 2 ,Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
-        spannableString07.setSpan(superscriptSpan02, 6, 7 ,Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+        spannableString07.setSpan(superscriptSpan01, 1, 2, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+        spannableString07.setSpan(superscriptSpan02, 6, 7, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
         RelativeSizeSpan sizeSpan05 = new RelativeSizeSpan(0.5f);
         RelativeSizeSpan sizeSpan06 = new RelativeSizeSpan(0.5f);
-        spannableString07.setSpan(sizeSpan05, 1, 2 ,Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
-        spannableString07.setSpan(sizeSpan06, 6, 7 ,Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+        spannableString07.setSpan(sizeSpan05, 1, 2, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+        spannableString07.setSpan(sizeSpan06, 6, 7, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
 
         textView07.setText(spannableString07);
     }
@@ -158,12 +158,11 @@ public class SpannableActivity extends AppCompatActivity {
             switch (msg.what) {
                 case 0x158:
                     SpannableString spannableString = new SpannableString(string);
-
                     RelativeSizeSpan sizeSpan = new RelativeSizeSpan(1.2f);
                     spannableString.setSpan(sizeSpan, position, position + 1, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
                     textView05.setText(spannableString);
                     position++;
-                    if(position >= textView05.getText().toString().length()) {
+                    if (position >= textView05.getText().toString().length()) {
                         position = 0;
                     }
                     handler.sendEmptyMessageDelayed(0x158, 150);

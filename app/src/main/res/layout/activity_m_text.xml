@@ -14,6 +14,22 @@
         sptv:lifeImgId="@drawable/balance_icon"
         sptv:liftText="左边文字"
         sptv:liftTextSize="14dp"
+        sptv:mDividerLineType="bottom"
+        sptv:rightImgId="@drawable/arrow_right_red"
+        sptv:rightText="右边文字"
+        sptv:rightTextColor="@color/base_red"
+        sptv:rightTextSize="12dp" />
+
+
+    <com.android.mvp.widge.MSuperTextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x80"
+        android:background="@color/white"
+        sptv:lifeImgId="@mipmap/ic_launcher_round"
+        sptv:liftText="左边文字"
+        sptv:liftTextSize="14dp"
+        sptv:mDividerLineColor="@color/base_red"
+        sptv:mDividerLineType="bottom"
         sptv:rightImgId="@drawable/arrow_right_red"
         sptv:rightText="右边文字"
         sptv:rightTextColor="@color/base_red"
