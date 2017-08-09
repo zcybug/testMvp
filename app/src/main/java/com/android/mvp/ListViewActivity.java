@@ -61,6 +61,8 @@ public class ListViewActivity extends MvpOkgoActivity<TestPresenter, TestView> i
     }
 
     private void initList() {
+        //SpannableActivity
+        listViewModels.add(new ListViewModel("SpannableActivity"));
         //MTextViewActivity
         listViewModels.add(new ListViewModel("MTextViewActivity"));
         //TextActivity

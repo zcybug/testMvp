@@ -62,5 +62,8 @@
             android:name=".SuperButtonActivity"
             android:label="SuperButton" />
         <activity android:name=".MTextViewActivity" />
+        <activity android:name=".ShowActivity" />
+        <activity android:name=".OtherActivity" />
+        <activity android:name=".SpannableActivity" />
     </application>
 </manifest>
