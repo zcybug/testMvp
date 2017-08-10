@@ -18,7 +18,7 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import lib.android.com.kotlinlib.MainKotlinActivity;
+import lib.android.com.kotlinlib.kotlinforandroid.LoginKotlinActivity;
 import mvp.android.com.mvplib.mvp.MvpOkgoActivity;
 import mvp.android.com.mvplib.utils.MViewHolder;
 
@@ -33,7 +33,7 @@ public class ListViewActivity extends MvpOkgoActivity<TestPresenter, TestView> i
 
     @OnClick(R.id.kotlin)
     public void skipKotlin() {
-        startActivity(new Intent(mContext, MainKotlinActivity.class));
+        startActivity(new Intent(mContext, LoginKotlinActivity.class));
     }
 
     private List<ListViewModel> listViewModels = new ArrayList<>();

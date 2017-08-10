@@ -140,6 +140,7 @@ http://web72-37976.58.xiniuyun.com/
 
 http://www.iconfont.cn/ 阿里巴巴图片
 
+https://www.kotlincn.net/docs/reference/  kotlin参考网站
 自定义属性：
 format :string,color,demension,integer,enum,reference,float,boolean,fraction,flag
  http://blog.csdn.net/pgalxx/article/details/6766677
