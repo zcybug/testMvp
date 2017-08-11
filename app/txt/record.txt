@@ -144,3 +144,8 @@ https://www.kotlincn.net/docs/reference/  kotlin参考网站
 自定义属性：
 format :string,color,demension,integer,enum,reference,float,boolean,fraction,flag
  http://blog.csdn.net/pgalxx/article/details/6766677
+
+ http://blog.5ibc.net/p/27554.html  关于三星手机4.3 是先setAdapter  还是先 addHeaderView 的问题
+
+
+ http://hjhrq1991.info/

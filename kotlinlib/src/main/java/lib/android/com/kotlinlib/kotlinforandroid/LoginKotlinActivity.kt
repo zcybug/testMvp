@@ -5,6 +5,7 @@ import android.os.Build
 import android.os.Bundle
 import android.support.annotation.RequiresApi
 import android.support.v7.app.AppCompatActivity
+import android.text.InputType
 import android.view.Gravity
 import android.view.View
 import android.widget.EditText
@@ -87,6 +88,7 @@ class LoginKotlinActivity : AppCompatActivity() {
                             hintTextColor = Color.parseColor("#666666")
                             textSize = 16f
                             background = null
+                            inputType=InputType.TYPE_TEXT_VARIATION_PASSWORD
                         }
                     }.lparams(width = dip(320), height = dip(40)) {
                         topMargin = dip(10)
@@ -101,7 +103,7 @@ class LoginKotlinActivity : AppCompatActivity() {
                         backgroundResource = R.drawable.bg_login_btn
                         onClick {
                             if (et_name.text.toString().isNotEmpty() && et_pass.text.toString().isNotEmpty())
-                                startActivity<MainKotlinActivity>("account" to et_name.text.toString(),"password" to et_pass.text.toString()) else toast("请输入账户或者密码")
+                                startActivity<MainKotlinActivity>("account" to et_name.text.toString(), "password" to et_pass.text.toString()) else toast("请输入账户或者密码")
                         }
                     }.lparams {
                         topMargin = dip(20)
@@ -117,6 +119,9 @@ class LoginKotlinActivity : AppCompatActivity() {
                             textColor = Color.parseColor("#1783e3")
                             gravity = Gravity.RIGHT
                             textSize = 16f
+                            onClick {
+                                toast("隐私协议")
+                            }
                         }.lparams {
                             weight = 1f
                         }
