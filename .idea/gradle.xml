@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/mvplib" />
             <option value="$PROJECT_DIR$/okgo" />
             <option value="$PROJECT_DIR$/okrx" />
+            <option value="$PROJECT_DIR$/webviewlib" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

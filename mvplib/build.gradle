@@ -58,4 +58,8 @@ dependencies {
     compile files('libs/pinyin4j-2.5.0.jar')
     compile project(':libtext')
     compile project(':kotlinlib')
+    //webview兼容
+    //    compile 'com.hjhrq1991.library.tbs:tbsjsbridge:1.0.2'
+    //compile 'com.hjhrq1991.library:jsbridge:1.0.6'
+    compile project(':webviewlib')
 }

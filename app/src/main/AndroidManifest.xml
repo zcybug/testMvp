@@ -65,5 +65,10 @@
         <activity android:name=".ShowActivity" />
         <activity android:name=".OtherActivity" />
         <activity android:name=".SpannableActivity" />
+        <activity android:name=".WebActivity" />
+        <activity android:name=".WebtbsActivity" />
+        <activity android:name=".Key1Activity" />
+        <activity android:name=".Key2Activity" />
+        <activity android:name=".Key3Activity" />
     </application>
 </manifest>
