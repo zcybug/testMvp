@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/edit_all_keyboard"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="全键盘" />
+
+    <EditText
+        android:id="@+id/edit_number_keyboard"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_all_keyboard"
+        android:text="数字随机键盘" />
+
+    <com.android.mvp.widge.key3.StockKeyboardView
+        android:id="@+id/keyboard_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ff202020"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:keyBackground="@drawable/btn_keyboard_key"
+        android:keyTextColor="#ffff0000"
+        android:visibility="gone"
+
+        />
+    <!-- android:background 键盘整体背景颜色 /图片
+    	 android:keyBackground 键盘按钮背景颜色/图片
+    	 android:keyTextColor 键盘按钮上文字颜色
+    	 android:keyPreviewLayout 自定义按键反馈弹出显示效果
+    -->
+
+</RelativeLayout>

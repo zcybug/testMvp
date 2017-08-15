@@ -16,8 +16,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!--  android:keyBackground="@drawable/key_number_bg"
-            android:keyPreviewLayout="@layout/key_preview_layout"-->
         <android.inputmethodservice.KeyboardView
             android:id="@+id/keyboard_view"
             android:layout_width="match_parent"
@@ -26,8 +24,8 @@
             android:background="#F4F4F4"
             android:focusable="true"
             android:focusableInTouchMode="true"
-            android:keyPreviewLayout="@layout/item_key_layout"
             android:keyBackground="@drawable/key_number_bg"
+            android:keyPreviewLayout="@layout/item_key_layout"
             android:keyTextColor="#000000"
             android:shadowColor="#FFFFFF"
             android:shadowRadius="0.0" />

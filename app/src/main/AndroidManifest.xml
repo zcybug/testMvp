@@ -70,5 +70,6 @@
         <activity android:name=".Key1Activity" />
         <activity android:name=".Key2Activity" />
         <activity android:name=".Key3Activity" />
+        <activity android:name=".DefineKeyboardActivity" />
     </application>
 </manifest>

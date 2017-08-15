@@ -10,6 +10,7 @@ import android.view.View.OnTouchListener;
 import android.widget.EditText;
 
 import com.android.mvp.util.Key3boardUtil;
+import com.android.mvp.util.Key4boardUtil;
 
 public class Key3Activity extends Activity {
 	private Context ctx;
@@ -32,7 +33,7 @@ public class Key3Activity extends Activity {
 		edit.setOnTouchListener(new OnTouchListener() {
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
-				new Key3boardUtil(act, ctx, edit).showKeyboard();
+				new Key4boardUtil(act, ctx, edit, Key4boardUtil.KeyboardStyle.KEYBOARD_STYLE_K4).showKeyboard();
 				return false;
 			}
 		});
