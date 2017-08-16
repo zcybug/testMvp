@@ -38,7 +38,7 @@ public class KeyboardUtil {
         this.ctx = ctx;
         this.ed = edit;
 
-        k1 = new Keyboard(ctx, R.xml.number);
+        k1 = new Keyboard(ctx, R.xml.custom_number);
         k2 = new Keyboard(ctx, R.xml.keyboard_abc);
         keyboardView = (KeyboardView) act.findViewById(R.id.keyboard_view);
         keyboardView.setKeyboard(k1);

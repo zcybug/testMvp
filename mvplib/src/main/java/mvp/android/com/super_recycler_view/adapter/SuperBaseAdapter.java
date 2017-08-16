@@ -397,7 +397,7 @@ public abstract class SuperBaseAdapter<T> extends RecyclerView.Adapter<BaseViewH
         int getSpanSize(GridLayoutManager gridLayoutManager, int position);
     }
     /**
-     * @param spanSizeLookup instance to be used to query number of spans occupied by each item
+     * @param spanSizeLookup instance to be used to query custom_number of spans occupied by each item
      */
     public void setSpanSizeLookup(SpanSizeLookup spanSizeLookup) {
         this.mSpanSizeLookup = spanSizeLookup;

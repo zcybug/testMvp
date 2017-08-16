@@ -83,7 +83,6 @@ public class DefineKeyboardUtil {
                 hideKeyboard();
             }
 
-
         }
 
         //按键点击时触发方法
@@ -198,18 +197,41 @@ public class DefineKeyboardUtil {
         for (int i = 0; i < size; i++) {
             int random_a = (int) (Math.random() * (size));
             int random_b = (int) (Math.random() * (size));
+            if (keyList.get(random_a).codes[0] == -2 || keyList.get(random_a).codes[0] == -5
+                    || keyList.get(random_b).codes[0] == -2 || keyList.get(random_b).codes[0] == -5) {
+                break;
+            } else {
+                int code = keyList.get(random_a).codes[0];
+                CharSequence label = keyList.get(random_a).label;
 
-            int code = keyList.get(random_a).codes[0];
-            CharSequence label = keyList.get(random_a).label;
+                keyList.get(random_a).codes[0] = keyList.get(random_b).codes[0];
+                keyList.get(random_a).label = keyList.get(random_b).label;
 
-            keyList.get(random_a).codes[0] = keyList.get(random_b).codes[0];
-            keyList.get(random_a).label = keyList.get(random_b).label;
-
-            keyList.get(random_b).codes[0] = code;
-            keyList.get(random_b).label = label;
-
+                keyList.get(random_b).codes[0] = code;
+                keyList.get(random_b).label = label;
+            }
         }
     }
+
+
+//    private void randomNumKey() {
+//        List<Key> keyList = keyboard_number.getKeys();
+//        int size = keyList.size();
+//        for (int i = 0; i < size; i++) {
+//            int random_a = (int) (Math.random() * (size));
+//            int random_b = (int) (Math.random() * (size));
+//
+//            int code = keyList.get(random_a).codes[0];
+//            CharSequence label = keyList.get(random_a).label;
+//
+//            keyList.get(random_a).codes[0] = keyList.get(random_b).codes[0];
+//            keyList.get(random_a).label = keyList.get(random_b).label;
+//
+//            keyList.get(random_b).codes[0] = code;
+//            keyList.get(random_b).label = label;
+//
+//        }
+//    }
 
     /**
      * 数字键盘切换
@@ -237,7 +259,6 @@ public class DefineKeyboardUtil {
         }
         return false;
     }
-
 
 }
 

@@ -1,1 +1,1 @@
-include ':app', ':mvplib', ':okgo', ':okrx', ':libzxing', ':libtext', ':kotlinlib', ':webviewlib'
+include ':app', ':mvplib', ':okgo', ':okrx', ':libzxing', ':libtext', ':kotlinlib', ':webviewlib', ':keyboardlib'

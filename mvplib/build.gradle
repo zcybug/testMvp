@@ -62,4 +62,5 @@ dependencies {
     //    compile 'com.hjhrq1991.library.tbs:tbsjsbridge:1.0.2'
     //compile 'com.hjhrq1991.library:jsbridge:1.0.6'
     compile project(':webviewlib')
+    compile project(':keyboardlib')
 }

@@ -68,6 +68,8 @@ public class ListViewActivity extends MvpOkgoActivity<TestPresenter, TestView> i
     }
 
     private void initList() {
+        //CustomKeyboardActivity
+        listViewModels.add(new ListViewModel("CustomKeyboardActivity"));
         //DefineKeyboardActivity
         listViewModels.add(new ListViewModel("DefineKeyboardActivity"));
         //Key1Activity
@@ -76,6 +78,8 @@ public class ListViewActivity extends MvpOkgoActivity<TestPresenter, TestView> i
         listViewModels.add(new ListViewModel("Key2Activity"));
         //Key3Activity
         listViewModels.add(new ListViewModel("Key3Activity"));
+        //Key5Activity
+        listViewModels.add(new ListViewModel("Key5Activity"));
         //WebtbsActivity
         listViewModels.add(new ListViewModel("WebtbsActivity"));
         //WebActivity
