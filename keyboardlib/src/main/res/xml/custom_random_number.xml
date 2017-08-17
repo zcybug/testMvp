@@ -4,25 +4,6 @@
     android:keyHeight="48dp"
     android:keyWidth="33.33%p"
     android:verticalGap="3dp">
-
-    <Row android:rowEdgeFlags="top">
-        <!--
-        isSticky：指定按键是否为sticky的。例如Shift大小写切换按键，具有两种状态，按下状态和正常状态，取值为true或则false。
-        isModifier：指定按键是否为功能键( modifier key ) ，例如 Alt 或则 Shift 。取值为true或则false。-->
-        <Key
-            android:codes="32"
-            android:isModifier="true"
-            android:isRepeatable="true"
-            android:keyEdgeFlags="left"
-            android:keyLabel="买个车安全键盘"
-            android:keyWidth="74.999996%p" />
-        <Key
-            android:codes="-3"
-            android:keyEdgeFlags="right"
-            android:keyLabel="完成"
-            android:keyWidth="25.000004%p" />
-    </Row>
-
     <Row>
         <Key
             android:codes="49"

@@ -64,9 +64,10 @@
                 android:text="random" />
 
             <Button
+                android:id="@+id/symbol"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="abc" />
+                android:text="symbol" />
 
         </LinearLayout>
     </LinearLayout>
@@ -89,7 +90,8 @@
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:keyBackground="@drawable/bg_base_keyboard_btn"
-            android:keyPreviewLayout="@layout/item_base_keyboard"
+            android:keyPreviewLayout="@layout/item_keyboard_preview"
+            android:keyPreviewOffset="0dp"
             android:keyTextColor="#333333"
             android:paddingTop="1dp"
             android:shadowColor="#ffffff"

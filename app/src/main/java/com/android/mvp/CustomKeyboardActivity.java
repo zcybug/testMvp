@@ -42,7 +42,7 @@ public class CustomKeyboardActivity extends AppCompatActivity {
     private int change_type;
 
 
-    @OnClick({R.id.show, R.id.hide, R.id.number, R.id.abc, R.id.price, R.id.idcard, R.id.random})
+    @OnClick({R.id.show, R.id.hide, R.id.number, R.id.abc, R.id.price, R.id.idcard, R.id.random, R.id.symbol})
     public void click(View view) {
         switch (view.getId()) {
             case R.id.show:
@@ -69,6 +69,10 @@ public class CustomKeyboardActivity extends AppCompatActivity {
                 break;
             case R.id.random:
                 change_type = CustomKeyboardUtil.KEYBOARD_STYLE_RANDOM_NUMBER;
+                showKeyboard();
+                break;
+            case R.id.symbol:
+                change_type = CustomKeyboardUtil.KEYBOARD_STYLE_SYMBOL;
                 showKeyboard();
                 break;
         }

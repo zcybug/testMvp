@@ -46,9 +46,9 @@
             android:codes="48"
             android:keyLabel="0" />
         <Key
-            android:codes="-3"
+            android:codes="-5"
             android:isRepeatable="true"
-            android:keyLabel="完成" />
+            android:keyLabel="DEL" />
     </Row>
 
 </Keyboard>

@@ -4,12 +4,16 @@ import android.app.Activity;
 import android.content.Context;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
+import android.os.Vibrator;
 import android.text.Editable;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * ================================================
@@ -30,6 +34,8 @@ public class CustomKeyboardUtil {
     private Keyboard price;
     private Keyboard abc;
     private Keyboard idcard;
+    private Keyboard symbol;
+    private Keyboard random;
     //	private Keyboard k2;
 //	private Keyboard k3;
     public boolean isnun = false;// 是否数据键盘
@@ -39,6 +45,7 @@ public class CustomKeyboardUtil {
     public final static int KEYBOARD_STYLE_ABC = 3; // ABC
     public final static int KEYBOARD_STYLE_ID = 4; // 身份证
     public final static int KEYBOARD_STYLE_RANDOM_NUMBER = 5; // 随机书记数字键盘
+    public final static int KEYBOARD_STYLE_SYMBOL = 6;//符号键盘
     private int type = -1;
     private KeyboardListener keyboardListener;
 
@@ -60,6 +67,8 @@ public class CustomKeyboardUtil {
         abc = new Keyboard(ctx, R.xml.custom_abc);
         price = new Keyboard(ctx, R.xml.custom_price);
         idcard = new Keyboard(ctx, R.xml.custom_idcard);
+        symbol = new Keyboard(ctx, R.xml.custom_symbol);
+        random = new Keyboard(ctx, R.xml.custom_random_number);
         try {
             keyboardView = (MCustomKeyboardView) ((Activity) ctx).findViewById(R.id.m_custom_keyboard);
             keyboardView.setContext(ctx);
@@ -88,9 +97,13 @@ public class CustomKeyboardUtil {
         } else if (style == KEYBOARD_STYLE_ID) {
             keyboardView.setKeyboard(idcard);
         } else if (style == KEYBOARD_STYLE_RANDOM_NUMBER) {
-            randomNumKey();
+//            randomNumKey();
+            randomdigkey();
             isnun = false;
-            keyboardView.setKeyboard(number);
+//            keyboardView.setKeyboard(random);
+        } else if (style == KEYBOARD_STYLE_SYMBOL) {
+            isnun = true;
+            keyboardView.setKeyboard(symbol);
         }
     }
 
@@ -126,6 +139,14 @@ public class CustomKeyboardUtil {
 
         @Override
         public void onPress(int primaryCode) {
+            vibrate(20);
+//            if (primaryCode == Keyboard.KEYCODE_SHIFT || primaryCode == Keyboard.KEYCODE_DELETE
+//                    || primaryCode == 32 || primaryCode == Keyboard.KEYCODE_MODE_CHANGE
+//                    || (primaryCode >= 48 && primaryCode <= 57)) {
+//                keyboardView.setPreviewEnabled(false);
+//            } else {
+//                keyboardView.setPreviewEnabled(true);
+//            }
         }
 
         @Override
@@ -144,15 +165,23 @@ public class CustomKeyboardUtil {
                 changeKey();
                 keyboardView.setKeyboard(abc);
             } else if (primaryCode == Keyboard.KEYCODE_MODE_CHANGE) {// 键盘切换
-                if (isnun) {
-                    isnun = false;
-                    if (type == KEYBOARD_STYLE_RANDOM_NUMBER) {
-                        randomNumKey();
-                    }
-                    keyboardView.setKeyboard(number);
-                } else {
-                    isnun = true;
+                Log.e("", "isnun==" + isnun);
+                if (type == KEYBOARD_STYLE_SYMBOL) {
+                    type = KEYBOARD_STYLE_NUMBER;
                     keyboardView.setKeyboard(abc);
+                } else {
+                    if (isnun) {
+                        isnun = false;
+                        if (type == KEYBOARD_STYLE_RANDOM_NUMBER) {
+//                            randomNumKey();
+                            randomdigkey();
+                        } else if (type == KEYBOARD_STYLE_NUMBER) {
+                            keyboardView.setKeyboard(number);
+                        }
+                    } else {
+                        isnun = true;
+                        keyboardView.setKeyboard(abc);
+                    }
                 }
             } else if (primaryCode == 57419) { // go left
                 if (start > 0) {
@@ -173,6 +202,8 @@ public class CustomKeyboardUtil {
                     editable.insert(start,
                             Character.toString((char) primaryCode));
                 }
+            } else if (primaryCode == 58971) {//标题
+
             } else {
                 String text = ed.getText().toString();
                 switch (type) {
@@ -240,6 +271,50 @@ public class CustomKeyboardUtil {
         }
     }
 
+//    public void showKeyboard() {
+//        this.ed.setFocusable(true);
+//        hideKeyBoard();
+//        Settings.System.putInt(this.act.getContentResolver(), Settings.System.TEXT_SHOW_PASSWORD, 1);
+//        rbLetter.setChecked(true);
+//        int visibility = rlKeyboard.getVisibility();
+//        if (visibility == View.GONE || visibility == View.INVISIBLE) {
+//            rlKeyboard.setVisibility(View.VISIBLE);
+//            rlKeyboard.startAnimation(AnimationUtils.loadAnimation(this.act, R.anim.show_keyboard));
+//        }
+//    }
+//
+//    public void hideKeyboard() {
+//        Settings.System.putInt(this.act.getContentResolver(), Settings.System.TEXT_SHOW_PASSWORD, 1);
+//        int visibility = rlKeyboard.getVisibility();
+//        if (visibility == View.VISIBLE) {
+//            rlKeyboard.setVisibility(View.INVISIBLE);
+//            rlKeyboard.startAnimation(AnimationUtils.loadAnimation(this.act, R.anim.hide_keyboard));
+//        }
+//    }
+//
+//
+//    /**
+//     * 打开系统软键盘
+//     */
+//    protected void openKeyBoard() {
+//        hideKeyboard();
+//        InputMethodManager imm = (InputMethodManager) this.ctx.getSystemService(Context.INPUT_METHOD_SERVICE);
+//        imm.toggleSoftInput(0, InputMethodManager.HIDE_NOT_ALWAYS);
+//    }
+//
+//    /**
+//     * 关闭系统软键盘
+//     */
+//    protected void hideKeyBoard() {
+//        InputMethodManager inputMsg = (InputMethodManager) this.ctx.getSystemService(Context.INPUT_METHOD_SERVICE);
+//        if (inputMsg.isActive()) { // 隐藏软键盘
+//            View curView = this.act.getCurrentFocus();
+//            if (curView != null) {
+//                inputMsg.hideSoftInputFromWindow(curView.getWindowToken(), 0);
+//            }
+//        }
+//    }
+
     private boolean isword(String str) {
         String wordstr = "abcdefghijklmnopqrstuvwxyz";
         if (wordstr.indexOf(str.toLowerCase()) > -1) {
@@ -272,5 +347,61 @@ public class CustomKeyboardUtil {
                 keyList.get(random_b).label = label;
             }
         }
+        keyboardView.setKeyboard(number);
+    }
+
+
+    private void randomdigkey() {
+        List<Keyboard.Key> keyList = random.getKeys();
+        // 查找出0-9的数字键
+        List<Keyboard.Key> newkeyList = new ArrayList<>();
+        for (int i = 0; i < keyList.size(); i++) {
+            if (keyList.get(i).label != null
+                    && isNumber(keyList.get(i).label.toString())) {
+                newkeyList.add(keyList.get(i));
+            }
+        }
+        // 数组长度
+        int count = newkeyList.size();
+        // 结果集
+        List<KeyModel> resultList = new ArrayList<KeyModel>();
+        // 用一个LinkedList作为中介
+        LinkedList<KeyModel> temp = new LinkedList<KeyModel>();
+        // 初始化temp
+        for (int i = 0; i < count; i++) {
+            temp.add(new KeyModel(48 + i, i + ""));
+        }
+        // 取数
+        Random rand = new Random();
+        for (int i = 0; i < count; i++) {
+            int num = rand.nextInt(count - i);
+            resultList.add(new KeyModel(temp.get(num).getCode(), temp.get(num)
+                    .getLable()));
+            temp.remove(num);
+        }
+        for (int i = 0; i < newkeyList.size(); i++) {
+            newkeyList.get(i).label = resultList.get(i).getLable();
+            newkeyList.get(i).codes[0] = resultList.get(i).getCode();
+        }
+        keyboardView.setKeyboard(random);
+    }
+
+    private boolean isNumber(String str) {
+        String wordstr = "0123456789.,";
+        return wordstr.contains(str);
+    }
+
+
+    /**
+     * 震动
+     *
+     * @param duration
+     */
+    protected void vibrate(long duration) {
+        Vibrator vibrator = (Vibrator) this.ctx.getSystemService(Context.VIBRATOR_SERVICE);
+        long[] pattern = {
+                0, duration
+        };
+        vibrator.vibrate(pattern, -1);
     }
 }
