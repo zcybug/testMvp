@@ -68,6 +68,8 @@ public class ListViewActivity extends MvpOkgoActivity<TestPresenter, TestView> i
     }
 
     private void initList() {
+        //CustomKeyboard1Activity
+        listViewModels.add(new ListViewModel("CustomKeyboard1Activity"));
         //CustomKeyboardActivity
         listViewModels.add(new ListViewModel("CustomKeyboardActivity"));
         //DefineKeyboardActivity

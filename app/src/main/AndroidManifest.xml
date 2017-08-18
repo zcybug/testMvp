@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.mvp">
 
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
     <application
         android:name=".MainApp"
         android:allowBackup="true"
@@ -73,5 +75,6 @@
         <activity android:name=".DefineKeyboardActivity" />
         <activity android:name=".Key5Activity" />
         <activity android:name=".CustomKeyboardActivity" />
+        <activity android:name=".CustomKeyboard1Activity" />
     </application>
 </manifest>

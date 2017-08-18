@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@android:color/transparent">
 
-
-    <!--键盘布局-->
     <RelativeLayout
+        android:id="@+id/rl_keyboard_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:visibility="gone">
 
-        <com.android.mvp.widge.key4.MyKeyboardView
+        <!--键盘布局-->
+        <lib.android.com.keyboardlib.MCustomKeyboardView
             android:id="@+id/custom_keyboard_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,14 +30,30 @@
             android:shadowRadius="0.0" />
 
         <LinearLayout
-
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="40dp"
+            android:layout_above="@+id/custom_keyboard_view"
+            android:background="#f2f2f2"
+            android:orientation="horizontal">
 
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:gravity="center"
+                android:text="买个车安全键盘"
+                android:textColor="#333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/btn_keyboard_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:text="完成"
+                android:textColor="#333"
+                android:textSize="16sp" />
         </LinearLayout>
-
-
     </RelativeLayout>
-
-</LinearLayout>
+</RelativeLayout>
