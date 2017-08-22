@@ -243,8 +243,7 @@ public class CustomViewKeyboardUtil {
                         break;
 
                     case KEYBOARD_STYLE_PRICE:
-                        if ((!text.contains(".") || text.length() - 1
-                                - text.indexOf(".") <= 1)
+                        if ((!text.contains(".") || text.length() - 1 - text.indexOf(".") <= 1)
                                 && text.length() < (text.contains(".") ? 10 : 7)) {
                             //小数点后最长2位，接受7位整数
                             editable.insert(start,

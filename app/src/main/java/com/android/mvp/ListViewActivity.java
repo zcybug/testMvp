@@ -103,6 +103,8 @@ public class ListViewActivity extends MvpOkgoActivity<TestPresenter, TestView> i
         listViewModels.add(new ListViewModel("CoordinatorLayoutActivity"));
         listViewModels.add(new ListViewModel("MainActivity"));
         listViewModels.add(new ListViewModel("MainAc"));
+        //TestOkMvpActivity
+        listViewModels.add(new ListViewModel("TestOkMvpActivity"));
         listViewModels.add(new ListViewModel("TestMvpActivity"));
         listViewModels.add(new ListViewModel("TestToorActivity"));
         listViewModels.add(new ListViewModel("WebviewActivity"));

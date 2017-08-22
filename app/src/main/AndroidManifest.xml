@@ -76,5 +76,6 @@
         <activity android:name=".Key5Activity" />
         <activity android:name=".CustomKeyboardActivity" />
         <activity android:name=".CustomKeyboard1Activity" />
+        <activity android:name=".TestOkMvpActivity" />
     </application>
 </manifest>
