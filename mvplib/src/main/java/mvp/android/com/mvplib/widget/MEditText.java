@@ -5,6 +5,7 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.widget.EditText;
@@ -76,36 +77,38 @@ public class MEditText extends EditText implements TextWatcher {
     }
 
     public void setPriceLimit() {
-        Editable editable = this.getText();
-        int start = this.getSelectionStart();
-        String text = this.getText().toString();
-        if (text.length() == 1) {
-            if (text.substring(0, 1).contains(".")) {//取字符首位为 .
-                XLog.e("=========1=====");
-                editable.delete(start - 1, start);
-                Toast.makeText(context, "首位不能输入小数点", Toast.LENGTH_SHORT).show();
-            }
-        } else if (text.length() == 2) {//
-            if (text.substring(0, 1).contains("0") && text.substring(1, 2).contains("0")) {
-                XLog.e("=========2=====");
-                Toast.makeText(context, "首位0,第二位只能输入小数点", Toast.LENGTH_SHORT).show();
-                editable.delete(start - 1, start);
-            }
-        } else if (text.length() > 2 && text.length() < (text.contains(".") ? maxLen + pointLen + 1 : maxLen)) {
-            if (text.substring(start - 2, start - 1).contains(".") && text.substring(start - 1, start).contains(".")) {
-                editable.delete(start - 1, start);
-                Toast.makeText(context, "小数点后面不能输入小数点", Toast.LENGTH_SHORT).show();
-            } else {
-                if ((!text.contains(".") || text.length() - 1 - text.indexOf(".") <= pointLen)) {
-                    XLog.e("==============");
-                } else {
+        if (getInputType() == InputType.TYPE_CLASS_NUMBER) {
+            Editable editable = this.getText();
+            int start = this.getSelectionStart();
+            String text = this.getText().toString();
+            if (text.length() == 1) {
+                if (text.substring(0, 1).contains(".")) {//取字符首位为 .
+                    XLog.e("=========1=====");
                     editable.delete(start - 1, start);
-                    Toast.makeText(context, "小数点后只能输入" + pointLen + "位小数", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "首位不能输入小数点", Toast.LENGTH_SHORT).show();
                 }
+            } else if (text.length() == 2) {//
+                if (text.substring(0, 1).contains("0") && !text.substring(1, 2).contains(".")) {
+                    XLog.e("=========2=====");
+                    Toast.makeText(context, "首位0,第二位只能输入小数点", Toast.LENGTH_SHORT).show();
+                    editable.delete(start - 1, start);
+                }
+            } else if (text.length() > 2 && text.length() < (text.contains(".") ? maxLen + pointLen + 1 : maxLen)) {
+                if (text.substring(start - 2, start - 1).contains(".") && text.substring(start - 1, start).contains(".")) {
+                    editable.delete(start - 1, start);
+                    Toast.makeText(context, "小数点后面不能输入小数点", Toast.LENGTH_SHORT).show();
+                } else {
+                    if ((!text.contains(".") || text.length() - 1 - text.indexOf(".") <= pointLen)) {
+                        XLog.e("==============");
+                    } else {
+                        editable.delete(start - 1, start);
+                        Toast.makeText(context, "小数点后只能输入" + pointLen + "位小数", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            } else if (text.length() > (text.contains(".") ? maxLen + 3 : maxLen)) {
+                editable.delete(start - 1, start);
+                Toast.makeText(context, "最多只能输入" + maxLen, Toast.LENGTH_SHORT).show();
             }
-        } else if (text.length() > (text.contains(".") ? maxLen + 3 : maxLen)) {
-            editable.delete(start - 1, start);
-            Toast.makeText(context, "最多只能输入" + maxLen, Toast.LENGTH_SHORT).show();
         }
     }
 }
