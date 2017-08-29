@@ -1,1 +1,2 @@
-include ':app', ':mvplib', ':okgo', ':okrx', ':libzxing', ':libtext', ':kotlinlib', ':webviewlib', ':keyboardlib'
+include ':app', ':mvplib', ':okgo', ':okrx', ':libzxing', ':libtext', ':kotlinlib', ':webviewlib',
+    ':keyboardlib', ':realmapp'

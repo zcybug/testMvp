@@ -150,5 +150,8 @@ format :string,color,demension,integer,enum,reference,float,boolean,fraction,fla
 
  http://hjhrq1991.info/
 
+https://realm.io/cn/docs/java/latest/#section
+ https://realm.io/    realm
 
- https://realm.io/ realm
+ realm : @Required修饰类型和空值（null）
+

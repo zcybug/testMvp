@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.android.mvp">
 
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
@@ -77,5 +78,6 @@
         <activity android:name=".CustomKeyboardActivity" />
         <activity android:name=".CustomKeyboard1Activity" />
         <activity android:name=".TestOkMvpActivity" />
+        <activity android:name=".RealmDBActivity" />
     </application>
 </manifest>
