@@ -52,6 +52,13 @@ public class RealmDBActivity extends BaseDetailActivity {
         cityAdapter.notifyDataSetChanged();
       }
     });
+
+    //byte[] key = new byte[64];
+    //new SecureRandom().nextBytes(key);
+    //RealmConfiguration config = new RealmConfiguration.Builder()
+    //    .encryptionKey(key)
+    //    .build();
+    //Realm realm = Realm.getInstance(config);
   }
 
   @Override protected int getLayoutView() {
