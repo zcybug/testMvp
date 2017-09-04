@@ -2,6 +2,7 @@ package zcy.android.com.realmapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,11 +10,16 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import butterknife.Bind;
-import butterknife.ButterKnife;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import mvp.android.com.mvplib.utils.MViewHolder;
+import zcy.android.com.realmapp.struct.FunctionNoParamNoResult;
+import zcy.android.com.realmapp.struct.FunctionsManager;
 
 public class MainActivity extends AppCompatActivity {
   List<ListViewModel> listViewModels = new ArrayList<>();
@@ -69,5 +75,17 @@ public class MainActivity extends AppCompatActivity {
       });
       return convertView;
     }
+  }
+
+  public void setFunctionForFragment(String tag){
+    FragmentManager fm=getSupportFragmentManager();
+    BaseFragment fragment= (BaseFragment) fm.findFragmentByTag(tag);
+    FunctionsManager fmanager=FunctionsManager.getInstance();
+    fragment.setmFunctionManager(fmanager.addFunction(new FunctionNoParamNoResult(BlankFragment1.INTERFACE) {
+      @Override
+      public void funtion() {
+        Toast.makeText(MainActivity.this,"成功调用无参无返回值的接口",Toast.LENGTH_LONG).show();
+      }
+    }));
   }
 }
