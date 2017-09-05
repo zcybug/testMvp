@@ -5,9 +5,9 @@ package zcy.android.com.realmapp.struct;
  */
 
 public abstract class FunctionWithParamOnly<Param> extends Function {
-    public FunctionWithParamOnly(String funtionName) {
-        super(funtionName);
-    }
+  public FunctionWithParamOnly(String functionName) {
+    super(functionName);
+  }
 
-    public   abstract  void funtion(Param data);
+  public abstract void function(Param data);
 }

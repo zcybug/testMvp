@@ -9,5 +9,5 @@ public abstract class FunctionWithParamAndResult<Result,Param> extends Function 
         super(functionName);
     }
 
-    public   abstract  Result funtion(Param data);
+    public   abstract  Result function(Param data);
 }

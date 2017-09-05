@@ -5,9 +5,9 @@ package zcy.android.com.realmapp.struct;
  */
 
 public abstract class FunctionWithResultOnly<Result> extends Function {
-    public FunctionWithResultOnly(String funtionName) {
-        super(funtionName);
-    }
+  public FunctionWithResultOnly(String functionName) {
+    super(functionName);
+  }
 
-    public   abstract  void funtion();
+  public abstract Result function();
 }

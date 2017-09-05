@@ -5,17 +5,10 @@
     android:layout_height="match_parent"
     >
 
-  <LinearLayout
-      android:orientation="vertical"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:id="@+id/ll_center"
-      ></LinearLayout>
-
-  <ListView
-      android:id="@+id/list"
+  <Button
+      android:onClick="setButtonListener"
+      android:text="fragment"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       />
-
 </LinearLayout>
