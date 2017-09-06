@@ -5,9 +5,9 @@ package zcy.android.com.realmapp.struct;
  */
 
 public abstract class Function {
-    public String mFuntionName;
+    public String mFunctionName;
 
-    public Function(String funtionName){
-        this.mFuntionName=funtionName;
+    public Function(String functionName){
+        this.mFunctionName=functionName;
     }
 }
