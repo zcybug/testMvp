@@ -80,4 +80,54 @@ public class FunctionsManager {
     }
     return null;
   }
+
+
+  public FunctionsManager addFunction(FunctionWithParamOnly function) {
+    mFunctionWithParamOnly.put(function.mFunctionName, function);
+    return this;
+  }
+
+  public <Param> void invokeFunction(String functionName, Param data)
+          throws FunctionException {
+    if (TextUtils.isEmpty(functionName) == true) {
+      return ;
+    }
+    if (null != mFunctionWithParamOnly) {
+      FunctionWithParamOnly f = mFunctionWithParamOnly.get(functionName);
+      if (null != f) {
+       f.function(data);
+      }
+      if (null == f) {
+        throw new FunctionException("Has no this function" + functionName);
+      }
+    }
+    return;
+  }
+
+
+  public FunctionsManager addFunction(FunctionWithParamAndResult function) {
+    mFunctionWithParamAndResult.put(function.mFunctionName, function);
+    return this;
+  }
+
+  public <Result,Param> Result invokeFunction(String functionName, Param data,Class<Result> c)
+          throws FunctionException {
+    if (TextUtils.isEmpty(functionName) == true) {
+      return null;
+    }
+    if (null != mFunctionWithParamAndResult) {
+      FunctionWithParamAndResult f = mFunctionWithParamAndResult.get(functionName);
+      if (null != f) {
+        if (null != c) {
+          return c.cast(f.function(data));
+        } else {
+          return (Result) f.function(data);
+        }
+      }
+      if (null == f) {
+        throw new FunctionException("Has no this function" + functionName);
+      }
+    }
+    return null;
+  }
 }

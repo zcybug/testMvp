@@ -32,6 +32,12 @@ public class BlankFragment1 extends BaseFragment {
   public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
       @Nullable Bundle savedInstanceState) {
     view = inflater.inflate(R.layout.fragment_layout, container, false);
+    view.findViewById(R.id.fragment_btn_1).setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        onButtonPressed("uri");
+      }
+    });
     return view;
   }
 
