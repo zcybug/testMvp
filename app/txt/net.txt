@@ -144,8 +144,9 @@ http://www.zcool.com.cn/work/ZMTI4MzEwMzI=.html
 
 http://android.tgbus.com/Android/tutorial/201107/359336.shtml（android 搜索）
 
+https://github.com/mqzhangw/AndroidComponent (组件化)
 
-
+http://www.cnblogs.com/hubcarl/p/4208144.html (git命令)
 
 
 http://192.168.18.81:8080/
