@@ -6,7 +6,7 @@
     >
 
   <Button
-      android:onClick="setButtonListener"
+      android:id="@+id/fragment_btn_1"
       android:text="fragment"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
