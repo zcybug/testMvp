@@ -55,6 +55,8 @@ public class ListViewActivity extends MvpOkgoActivity<TestPresenter, TestView> i
   }
 
   private void initList() {
+    //MainCanvasActivity
+    listViewModels.add(new ListViewModel("MainCanvasActivity"));
     //RealmDBActivity
     listViewModels.add(new ListViewModel("RealmDBActivity"));
     //CustomKeyboard1Activity

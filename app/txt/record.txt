@@ -151,6 +151,7 @@ format :string,color,demension,integer,enum,reference,float,boolean,fraction,fla
  http://hjhrq1991.info/
 
 https://realm.io/cn/docs/java/latest/#section
+http://static.realm.io/downloads/java/latest
  https://realm.io/    realm
 
  realm : @Required修饰类型和空值（null）
@@ -161,4 +162,6 @@ http://blog.csdn.net/huxing32/article/details/42616241  usb
 
 b、设置Activity的android:configChanges="orientation"时，切屏还是会重新调用各个生命周期，切横、竖屏时只会执行一次。
 c、设置Activity的android:configChanges="orientation|keyboardHidden"时，切屏不会重新调用各个生命周期，只会执行onConfigurationChanged方法。
+
+http://blog.csdn.net/iispring/article/details/49770651  canvas
 
