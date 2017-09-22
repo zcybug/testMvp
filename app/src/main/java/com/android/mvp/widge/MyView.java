@@ -15,6 +15,7 @@ import android.view.View;
 import com.android.mvp.R;
 import java.util.ArrayList;
 import java.util.List;
+import mvp.android.com.mvplib.log.KLog;
 import mvp.android.com.mvplib.log.XLog;
 
 public class MyView extends View {
@@ -477,6 +478,7 @@ public class MyView extends View {
     int canvasWidth = canvas.getWidth();
     int deltaX = canvasWidth / 4;
     int deltaY = (int) (deltaX * 0.75);
+    XLog.e("deltaX="+deltaX+"=deltaY="+deltaY);
 
     paint.setColor(0xff8bc5ba);//设置画笔颜色
     paint.setStrokeWidth(4);//设置线宽
@@ -546,16 +548,25 @@ public class MyView extends View {
     Path path4 = new Path();
     //1. 第一部分，绘制线段
     path4.moveTo(0, 0);
-    path4.lineTo(canvasWidth / 2 - 20, 0);//绘制线段
-    path4.moveTo(canvasWidth / 2 + 20, 0);
-    path4.lineTo(canvasWidth, 0);
-    XLog.e(deltaX + "");
+    path4.lineTo(canvasWidth / 2 - 40, 0);//绘制线段
+    KLog.e(deltaX + "");
     pointList.add(new Point(0, 0));
-    pointList.add(new Point(canvasWidth / 2 - 20, 0));
-    pointList.add(new Point(canvasWidth / 2 + 20, 0));
+    //pointList.add(new Point(canvasWidth / 2 - 40, 0));
+    //pointList.add(new Point(canvasWidth / 2 + 40, 0));
     //2. 第二部分，绘制椭圆右上角的四分之一的弧线
-    RectF arcRecF4 = new RectF(0, 0, deltaX, deltaY);
-    path4.arcTo(arcRecF4, 270, 90);//绘制圆弧
+    //left、top、right、bottom
+    int canvasHeight = canvas.getHeight();
+    int count = 5;
+    float ovalHeight = 30;
+    float left = canvasWidth / 2 - 40;
+    float top = 0;
+    float right = canvasWidth - left;
+    float bottom= ovalHeight;
+    path4.moveTo(canvasWidth / 2 + 40, 0);
+    RectF rectF4 = new RectF(left, top, right, bottom);
+    path4.arcTo(rectF4, 0, 180);//绘制圆弧
+    path4.moveTo(canvasWidth / 2 + 40, 0);
+    path4.lineTo(canvasWidth, 0);
     canvas.drawPath(path4, paint);
 
     //最后绘制Path的连接点，方便我们大家对比观察

@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/okgo/okgo.iml" filepath="$PROJECT_DIR$/okgo/okgo.iml" />
       <module fileurl="file://$PROJECT_DIR$/okrx/okrx.iml" filepath="$PROJECT_DIR$/okrx/okrx.iml" />
       <module fileurl="file://$PROJECT_DIR$/realmapp/realmapp.iml" filepath="$PROJECT_DIR$/realmapp/realmapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tablib/tablib.iml" filepath="$PROJECT_DIR$/tablib/tablib.iml" />
       <module fileurl="file://$PROJECT_DIR$/testMvp.iml" filepath="$PROJECT_DIR$/testMvp.iml" />
       <module fileurl="file://$PROJECT_DIR$/webviewlib/webviewlib.iml" filepath="$PROJECT_DIR$/webviewlib/webviewlib.iml" />
     </modules>
