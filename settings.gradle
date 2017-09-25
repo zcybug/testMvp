@@ -1,3 +1,2 @@
 include ':app', ':mvplib', ':okgo', ':okrx', ':libzxing', ':libtext', ':kotlinlib', ':webviewlib',
-    ':tablib',
-    ':keyboardlib', ':realmapp'
+    ':tablib', ':keyboardlib', ':realmapp'
