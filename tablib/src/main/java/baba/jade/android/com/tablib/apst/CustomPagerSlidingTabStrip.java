@@ -88,9 +88,11 @@ public class CustomPagerSlidingTabStrip extends HorizontalScrollView {
 
   public CustomPagerSlidingTabStrip(Context context, AttributeSet attrs, int defStyle) {
     super(context, attrs, defStyle);
-
+    //当你想让一个高度值不足scrollview的子控件fillparent的时候，
+    //单独的定义android:layout_height="fill_parent"是不起作用的，
+    //必须加上fillviewport属性，当子控件的高度值大于scrollview的高度时，这个标签就没有任何意义了。
     setFillViewport(true);
-    setWillNotDraw(false);
+    setWillNotDraw(false);//onDraw()不执行
 
     tabsContainer = new LinearLayout(context);
     tabsContainer.setOrientation(LinearLayout.HORIZONTAL);
