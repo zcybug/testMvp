@@ -4,5 +4,97 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
+  <LinearLayout
+      android:gravity="center_vertical"
+      android:layout_width="match_parent"
+      android:layout_height="30dp"
+      android:orientation="horizontal"
+      >
 
+    <TextView
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:id="@+id/tv_classify"
+        android:textSize="14sp"
+        android:text="分类"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        />
+
+    <TextView
+        android:paddingRight="4dp"
+        android:id="@+id/tv_guid1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:gravity="right|center"
+        android:text="特性1"
+        android:textSize="14sp"
+        />
+    <TextView
+        android:id="@+id/tv_guid2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:text="特性2"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_center"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:gravity="center"
+        android:text="中间"
+        android:textSize="14sp"
+        />
+    <TextView
+        android:id="@+id/tv_guid3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:text="特性3 "
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:paddingLeft="4dp"
+        android:id="@+id/tv_guid4"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:gravity="center|left"
+        android:text="特性4"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:id="@+id/tv_search"
+        android:textSize="14sp"
+        android:text="搜索"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        />
+  </LinearLayout>
+
+  <ImageView
+      android:id="@+id/cursor"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:scaleType="matrix"
+      android:src="@drawable/cursor"
+      />
+
+  <android.support.v4.view.ViewPager
+      android:id="@+id/viewpager"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:flipInterval="30"
+      android:persistentDrawingCache="animation"
+      />
 </LinearLayout>
