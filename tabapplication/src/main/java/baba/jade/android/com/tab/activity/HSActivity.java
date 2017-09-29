@@ -198,7 +198,6 @@ public class HSActivity extends AppCompatActivity {
   }
 
   private void setListener() {
-    // TODO Auto-generated method stub
     mViewPager.addOnPageChangeListener(new MyPagerOnPageChangeListener());
   }
 

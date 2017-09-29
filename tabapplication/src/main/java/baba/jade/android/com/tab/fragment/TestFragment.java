@@ -68,7 +68,7 @@ public class TestFragment extends Fragment {
     super.setUserVisibleHint(isVisibleToUser);
     Log.e("===", "" + getUserVisibleHint());
     if (getUserVisibleHint()) {
-      viewhello.setText(defaultHello);
+      //((TextView) view.findViewById(R.id.tv)).setText(defaultHello);
     } else {
     }
   }
