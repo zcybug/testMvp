@@ -109,6 +109,8 @@ http://www.easyicon.net/ 图标
 
 http://www.2cto.com/kf/201405/304749.html  异步加载
 
+https://github.com/RuffianZhong/RTextView
+
 peisong 配送商
 
 晓文 2015/7/24 9:36:30

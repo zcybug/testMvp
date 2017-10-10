@@ -64,7 +64,7 @@ public class HSActivity extends AppCompatActivity {
     setListener();
     iniVariable();
 
-    mViewPager.setCurrentItem(0);
+    mViewPager.setCurrentItem(1);
   }
 
   private void initDatas() {
@@ -122,7 +122,7 @@ public class HSActivity extends AppCompatActivity {
     for (int i = 0; i < titleList.size(); i++) {
       Map<String, String> map = titleList.get(i);
       RadioButton radio = new RadioButton(this);
-
+      //radio.setCompoundDrawablesWithIntrinsicBounds(R.mipmap.ic_launcher_round, 0, 0, 0);
       radio.setBackgroundResource(R.drawable.radiobtn_selector);
       radio.setButtonDrawable(android.R.color.transparent);
       LinearLayout.LayoutParams l =
@@ -136,7 +136,7 @@ public class HSActivity extends AppCompatActivity {
       radio.setText(map.get("title"));
       radio.setTextColor(Color.WHITE);
       radio.setTag(map);
-      if (i == 0) {
+      if (i == 1) {
         radio.setChecked(true);
         int itemWidth = (int) radio.getPaint().measureText(map.get("title"));
         mImageView.setLayoutParams(new LinearLayout.LayoutParams(
@@ -145,14 +145,12 @@ public class HSActivity extends AppCompatActivity {
       myRadioGroup.addView(radio);
     }
     myRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-
       @Override public void onCheckedChanged(RadioGroup group, int checkedId) {
         //Map<String, Object> map = (Map<String, Object>) group.getChildAt(checkedId).getTag();
         int radioButtonId = group.getCheckedRadioButtonId();
         //根据ID获取RadioButton的实例
         RadioButton rb = (RadioButton) findViewById(radioButtonId);
         Map<String, Object> selectMap = (Map<String, Object>) rb.getTag();
-
         AnimationSet animationSet = new AnimationSet(true);
         TranslateAnimation translateAnimation;
         translateAnimation = new TranslateAnimation(mCurrentCheckedRadioLeft, rb.getLeft(), 0f, 0f);
@@ -177,7 +175,7 @@ public class HSActivity extends AppCompatActivity {
 
   private void iniVariable() {
     mTabs = new ArrayList<TestFragment>();
-    for (int i = 0; i < titleList.size(); i++) {
+    for (int i = 0; i < titleList.size()-3; i++) {
       TestFragment tab = new TestFragment();
       Bundle bundle = new Bundle();
       bundle.putString("id", i + "");

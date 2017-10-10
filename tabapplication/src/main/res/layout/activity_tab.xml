@@ -21,6 +21,7 @@
         android:layout_height="match_parent"
         />
 
+
     <TextView
         android:paddingRight="4dp"
         android:id="@+id/tv_guid1"
@@ -84,11 +85,18 @@
 
   <ImageView
       android:id="@+id/cursor"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:scaleType="matrix"
-      android:src="@drawable/cursor"
+      android:layout_width="0dp"
+      android:layout_height="4dp"
+      android:background="#33b5e5"
+      android:layout_gravity="bottom"
       />
+  <!--<ImageView-->
+      <!--android:id="@+id/cursor"-->
+      <!--android:layout_width="wrap_content"-->
+      <!--android:layout_height="wrap_content"-->
+      <!--android:scaleType="matrix"-->
+      <!--android:src="@drawable/cursor"-->
+      <!--/>-->
 
   <android.support.v4.view.ViewPager
       android:id="@+id/viewpager"
