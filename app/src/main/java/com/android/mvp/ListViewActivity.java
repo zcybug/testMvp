@@ -55,6 +55,10 @@ public class ListViewActivity extends MvpOkgoActivity<TestPresenter, TestView> i
   }
 
   private void initList() {
+    //BigPicActivity
+    listViewModels.add(new ListViewModel("BigPicActivity"));
+    //MainPicActivity
+    listViewModels.add(new ListViewModel("MainPicActivity"));
     //MainCanvasActivity
     listViewModels.add(new ListViewModel("MainCanvasActivity"));
     //RealmDBActivity

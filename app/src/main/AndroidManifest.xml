@@ -88,5 +88,7 @@
     <activity android:name=".RealmDBActivity" />
     <activity android:name=".MainCanvasActivity" />
     <activity android:name=".CanvasActivity" />
+    <activity android:name=".MainPicActivity" />
+    <activity android:name=".BigPicActivity" />
   </application>
 </manifest>
