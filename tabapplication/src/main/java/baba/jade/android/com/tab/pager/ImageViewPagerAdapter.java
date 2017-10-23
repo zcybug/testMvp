@@ -21,15 +21,23 @@ public class ImageViewPagerAdapter extends FragmentStatePagerAdapter {
 
   private static final String IMAGE_URL = "image";
 
-  List<String> mDatas;
+  private List<String> mDatas;
+  private int defPosition = -1;
 
   public ImageViewPagerAdapter(FragmentManager fm, List data) {
     super(fm);
     mDatas = data;
   }
 
+  public void setPosition(int position) {
+    this.defPosition = position;
+  }
+
   @Override public Fragment getItem(int position) {
     String url = mDatas.get(position);
+    if (-1 != defPosition && defPosition < mDatas.size()) {
+      url = mDatas.get(defPosition);
+    }
     Fragment fragment = ImageFragment.newInstance(url);
     return fragment;
   }

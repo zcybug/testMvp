@@ -48,5 +48,7 @@ public class ImageActivity extends AppCompatActivity {
     list.add(url3);
     adapter = new ImageViewPagerAdapter(getSupportFragmentManager(), list);
     pager.setAdapter(adapter);
+    adapter.setPosition(1);
+    adapter.notifyDataSetChanged();
   }
 }

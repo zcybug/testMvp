@@ -31,7 +31,7 @@ Alt+←：后退，定位到上个查看或者编辑的地方
 Alt+→：往前定位，比如你定位到上个点后，想回去，就可以用这个快捷键
 Ctrl+/：当行注释，反注释再按一次即可
 Ctrl+Shift+/：模块注释，反注释再按一次即可,注意这边的”/“不能用小键盘的
-Ctrl+Shift+小键盘/：折叠代码（Ctrl+Shift+小键盘*这个不灵了，今天没空了，后面会针对这个问题做解决，并更新上来），当然笔记本没小键盘，你可以自己改快捷键
+Ctrl+Shift+小键盘/：折叠代码（Ctrl+Shift+小键盘*这个不灵了，
 Ctrl+Alt+S：打开settings界面
 Ctrl+Alt+Shift+S：打开Project Structure界面
 Alt+Shift+X：运行（Run）
@@ -173,3 +173,4 @@ http://www.bejson.com/jsonviewernew/ json解析
 GrowingIO 统计
 
 http://blog.csdn.net/qq_23921815/article/details/52004986 视频
+https://stackoverflow.com
