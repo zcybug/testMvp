@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="base_wite_color">#ffffffff</color>
-    <color name="base_recycler_divider_color">#f5f7fd</color>
-    <color name="base_red">#E14D50</color>
-    <color name="color_bg_write">#ffffff</color>
-    <color name="color_bg_toolbar">#E14D50</color>
-    <color name="gray">#f5f5f5</color>
+  <color name="base_wite_color">#ffffffff</color>
+  <color name="base_recycler_divider_color">#f5f7fd</color>
+  <color name="base_red">#E14D50</color>
+  <color name="color_bg_write">#ffffff</color>
+  <color name="color_bg_toolbar">#E14D50</color>
+  <color name="gray">#f5f5f5</color>
+  <color name="abs_version_dialog_close_line">#d8d8d8</color>
+  <color name="abs_version_dialog_message">#666666</color>
+  <color name="abs_version_dialog_title">@android:color/black</color>
+  <color name="abs_version_dialog_button">#ffffff</color>
+  <color name="abs_version_dialog_content">#ffffff</color>
+  <color name="abs_version_dialog_button_background_normal">#E14D50</color>
+  <color name="abs_version_dialog_button_background_pressed">#ccE14D50</color>
 </resources>

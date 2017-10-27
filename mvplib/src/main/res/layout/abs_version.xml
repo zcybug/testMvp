@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      >
+    <ImageView
+        android:id="@+id/abs_version_dialog_head"
+        style="@style/abs_version_dialog_head"
+        />
+
+    <LinearLayout style="@style/abs_version_dialog_content">
+
+      <TextView
+          android:id="@+id/abs_version_dialog_title"
+          style="@style/abs_version_dialog_title"
+          />
+
+      <TextView
+          android:id="@+id/abs_version_dialog_message"
+          style="@style/abs_version_dialog_message"
+          />
+
+      <FrameLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          >
+
+        <TextView
+            android:id="@+id/abs_version_dialog_button"
+            style="@style/abs_version_dialog_button"
+            />
+
+        <abs.view.NumberProgress
+            android:id="@+id/abs_version_dialog_download_progress"
+            style="@style/abs_version_dialog_download_progress"
+            android:visibility="gone"
+            />
+      </FrameLayout>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/abs_version_dialog_close_layout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal"
+      android:orientation="vertical"
+      >
+    <View style="@style/abs_version_dialog_close_line" />
+
+    <ImageView
+        android:id="@+id/abs_version_dialog_close"
+        style="@style/abs_version_dialog_close"
+        />
+
+
+  </LinearLayout>
+
+</LinearLayout>

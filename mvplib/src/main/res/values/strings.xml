@@ -1,30 +1,34 @@
 <resources>
-    <string name="app_name">mvpLib</string>
+  <string name="app_name">mvpLib</string>
 
-    <string name="empty_view_hint">暂无数据</string>
-    <string name="error_view_hint">加载失败</string>
-    <string name="no_network_view_hint">网络异常</string>
+  <string name="empty_view_hint">暂无数据</string>
+  <string name="error_view_hint">加载失败</string>
+  <string name="no_network_view_hint">网络异常</string>
 
-    <string name="not_network">当前无网络连接,请检查网络..</string>
-    <string name="loadin_view_hint">正在加载中...</string>
-    <string name="no_network_hint">网络异常</string>
-    <string name="no_more_hint">over，到底了!</string>
-    <string name="rest_network_hing">加载失败,点击重新加载</string>
+  <string name="not_network">当前无网络连接,请检查网络..</string>
+  <string name="loadin_view_hint">正在加载中...</string>
+  <string name="no_network_hint">网络异常</string>
+  <string name="no_more_hint">over，到底了!</string>
+  <string name="rest_network_hing">加载失败,点击重新加载</string>
 
-    <string name="listview_header_hint_normal">下拉刷新</string>
-    <string name="listview_header_hint_release">释放立即刷新</string>
-    <string name="listview_loading">正在加载</string>
-    <string name="nomore_loading">没有了</string>
-    <string name="refreshing">正在刷新</string>
-    <string name="refresh_done">刷新完成</string>
-    <string name="net_work">请检查网络</string>
-    <string name="listview_header_last_time">上次更新时间：</string>
+  <string name="listview_header_hint_normal">下拉刷新</string>
+  <string name="listview_header_hint_release">释放立即刷新</string>
+  <string name="listview_loading">正在加载</string>
+  <string name="nomore_loading">没有了</string>
+  <string name="refreshing">正在刷新</string>
+  <string name="refresh_done">刷新完成</string>
+  <string name="net_work">请检查网络</string>
+  <string name="listview_header_last_time">上次更新时间：</string>
 
-    <string name="scan">扫描</string>
-    <string name="add">添加</string>
-    <string name="setting">设置</string>
-    <string name="search">搜索</string>
-    <string name="date">日期</string>
-    <string name="refresh">刷新</string>
+  <string name="scan">扫描</string>
+  <string name="add">添加</string>
+  <string name="setting">设置</string>
+  <string name="search">搜索</string>
+  <string name="date">日期</string>
+  <string name="refresh">刷新</string>
 
+  <string name="abs_version_button_upgrade">升级</string>
+  <string name="abs_version_is_to_upgrade">是否升级到%s版本？</string>
+  <string name="abs_version_upgrade_size">新版本大小：%s</string>
+  <string name="abs_version_no_new">已是最新的版本</string>
 </resources>

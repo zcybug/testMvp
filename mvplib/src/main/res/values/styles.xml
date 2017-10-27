@@ -1,11 +1,83 @@
 <resources>
-    <style name="MultipleStatusView"/>
-    <style name="MultipleStatusView.Content">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_centerInParent">true</item>
-        <item name="android:layout_margin">8dp</item>
-        <item name="android:textColor">#a9b7b7</item>
-        <item name="android:textSize">16sp</item>
-    </style>
+
+  <style name="MultipleStatusView" />
+
+  <style name="MultipleStatusView.Content">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_centerInParent">true</item>
+    <item name="android:layout_margin">8dp</item>
+    <item name="android:textColor">#a9b7b7</item>
+    <item name="android:textSize">16sp</item>
+  </style>
+
+  <style name="abs_version_dialog_close">
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:scaleType">center</item>
+    <item name="android:src">@mipmap/abs_version_dialog_close</item>
+  </style>
+
+  <style name="abs_version_dialog_close_line">
+    <item name="android:layout_height">@dimen/x40</item>
+    <item name="android:layout_width">@dimen/x1</item>
+    <item name="android:background">@color/abs_version_dialog_close_line</item>
+  </style>
+
+  <style name="abs_version_dialog_head">
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:scaleType">center</item>
+    <item name="android:src">@mipmap/abs_version_dialog_head</item>
+  </style>
+
+  <style name="abs_version_dialog_message">
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:textColor">@color/abs_version_dialog_message</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:paddingTop">@dimen/x10</item>
+    <item name="android:paddingBottom">@dimen/x10</item>
+  </style>
+
+  <style name="abs_version_dialog_content">
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:background">@drawable/abs_version_dialog_content_bg</item>
+    <item name="android:padding">@dimen/x15</item>
+    <item name="android:orientation">vertical</item>
+  </style>
+
+  <style name="abs_version_dialog_title">
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:textColor">@color/abs_version_dialog_title</item>
+    <item name="android:textSize">15sp</item>
+  </style>
+
+  <style name="abs_version_dialog_button">
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:textColor">@color/abs_version_dialog_button</item>
+    <item name="android:textSize">15sp</item>
+    <item name="android:paddingTop">@dimen/x13</item>
+    <item name="android:paddingBottom">@dimen/x13</item>
+    <item name="android:gravity">center</item>
+    <item name="android:background">@drawable/abs_version_dialog_button_background</item>
+    <item name="android:text">@string/abs_version_button_upgrade</item>
+  </style>
+
+  <style name="abs_version_dialog_download_progress">
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_gravity">center_vertical</item>
+    <item name="progress_max">100</item>
+    <item name="progress_current">0</item>
+    <item name="progress_unreached_color">#CCCCCC</item>
+    <item name="progress_reached_color">@color/abs_version_dialog_button_background_normal</item>
+    <item name="progress_text_size">12sp</item>
+    <item name="progress_text_color">@color/abs_version_dialog_button_background_normal</item>
+    <item name="progress_reached_bar_height">@dimen/x4</item>
+    <item name="progress_unreached_bar_height">@dimen/x3</item>
+  </style>
 </resources>
